@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-KE">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,10 @@
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Open+Sans:wght@400;700&family=Montserrat:wght@700&family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Preloading -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/merriweather/v30/u-440qyriQwlOrhSvowK_l5-fCZJ.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJ5h.woff2" as="font" type="font/woff2" crossorigin>
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous">
     <!-- Custom CSS -->
@@ -20,12 +23,12 @@
     <header class="header-area">
         <div class="container">
             <!-- Donation Link -->
-            <a href="#" class="donation-link">Donate</a>
+            <a href="/donate" class="donation-link">Donate</a>
             <!-- Header Content -->
             <div class="header-content">
                 <!-- Left Logo -->
                 <div class="logo-left-container">
-                    <img src="Images/Left Logo.png" alt="Tumaini Left Logo" class="logo-left img-fluid">
+                    <img src="Images\Left Logo.png" alt="Tumaini Left Logo" class="logo-left img-fluid">
                 </div>
                 <!-- Navbar -->
                 <nav class="navbar navbar-expand-lg">
@@ -41,20 +44,19 @@
                             <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
                             <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
                             <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                            <div class="contact-info text-end">
-                                <p class="mb-0">Have any questions?</p>
-                                <a href="tel:+254728823573" aria-label="Call us at 0728823573"><i class="fas fa-phone"></i> 0728823573</a>
-                            </div>
                         </ul>
                     </div>
                 </nav>
                 <!-- Right Logo -->
                 <div class="logo-right-container">
-                    <img src="Images/Right Logo.png" alt="Tumaini Right Logo" class="logo-right img-fluid">
+                    <img src="Images\Right Logo.png" alt="Tumaini Right Logo" class="logo-right img-fluid">
+                </div>
+                <!-- Contact Info -->
+                <div class="contact-info text-end">
+                    <p class="mb-0">Have any questions?</p>
+                    <a href="tel:+254728823573" aria-label="Call us at 0728823573"><i class="fas fa-phone"></i> +254 728 823 573</a>
                 </div>
             </div>
-            <!-- Contact Info -->
-
             <!-- Center Logo -->
             <div class="logo text-center">
                 <h1>Tumaini Autism Centre</h1>
@@ -66,7 +68,7 @@
     <!-- Hero Section -->
     <section class="hero-section" id="top" aria-labelledby="hero-title">
         <div class="hero-image-container">
-            <img src="Images\offices.jpeg" alt="Children playing at Tumaini Centre" class="hero-img" loading="lazy">
+            <img src="Images/offices.jpeg" alt="Children playing at Tumaini Centre" class="hero-img" loading="lazy">
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-text">
@@ -108,18 +110,18 @@
                         <article class="about-row-content">
                             <h3 class="row-title">The Action</h3>
                             <p>
-                                In a decisive move, <b> Catholic Archdiocese of Nyeri </b>launched a transformative initiative to address neurodevelopmental challenges in the region.
-                                 In March 2024, the Archdiocese hosted a Neurodevelopmental Education Day, convening 1,193 participants from Nyeri, Laikipia, Meru, 
-                                 and surrounding areas. The event brought to light a pressing reality: 549 attendees were identified with developmental challenges,
-                                including 280 autistic children urgently requiring intervention. For many families, access to therapy remained out of reach, 
-                                with a single session of <b>speech therapy costing KES 3,000 ($20)</b><b>and occupational therapy priced at KES 2,000 ($15) fees</b> far beyond their financial means. Recognizing the critical need for action, 
+                                In a decisive move, the <b>Catholic Archdiocese of Nyeri</b> launched a transformative initiative to address neurodevelopmental challenges in the region.
+                                In March 2024, the Archdiocese hosted a Neurodevelopmental Education Day, convening 1,193 participants from Nyeri, Laikipia, Meru,
+                                and surrounding areas. The event brought to light a pressing reality: 549 attendees were identified with developmental challenges,
+                                including 280 autistic children urgently requiring intervention. For many families, access to therapy remained out of reach,
+                                with a single session of <b>speech therapy costing KES 3,000 ($20)</b> and <b>occupational therapy priced at KES 2,000 ($15)</b>, fees far beyond their financial means. Recognizing the critical need for action,
                                 the Archdiocese committed to further intervention.
                             </p>
                             <p>
                                 With a vision to transform lives, the Catholic Archdiocese of Nyeri donated land and structures to establish the Tumaini Autism
-                                Centre on Huruma Road, near Huruma Hospital in Nanyuki. <b>The name "Tumaini," meaning "hope" in Swahili,</b>became a promise—a promise to provide
+                                Centre on Huruma Road, near Huruma Hospital in Nanyuki. <b>The name "Tumaini," meaning "hope" in Swahili,</b> became a promise—a promise to provide
                                 affordable therapy, a supportive community, and a future where autistic children could thrive. The centre opened its doors with a mission to
-                                break down barriers, <b>occupational therapy for KES 300 and speech therapy for KES 500 per session,</b> a fraction of traditional costs,
+                                break down barriers, offering <b>occupational therapy for KES 300 and speech therapy for KES 500 per session,</b> a fraction of traditional costs,
                                 with the hope of making therapies free as funding grows.
                             </p>
                         </article>
@@ -164,7 +166,7 @@
                             </div>
                             <h3>Occupational Therapy</h3>
                             <p>Helping children develop daily living skills, fine motor skills, and sensory integration through personalized therapy.</p>
-                            <a href="#" class="btn btn-link">Read More</a>
+                           
                         </article>
                     </div>
                     <div class="col-md-3">
@@ -174,7 +176,7 @@
                             </div>
                             <h3>Speech Therapy</h3>
                             <p>Supporting communication development with tailored speech and language interventions for children with autism.</p>
-                            <a href="#" class="btn btn-link">Read More</a>
+                            
                         </article>
                     </div>
                     <div class="col-md-3">
@@ -183,8 +185,9 @@
                                 <i class="fas fa-users" aria-hidden="true"></i>
                             </div>
                             <h3>Behavioral Therapy</h3>
-                            <p>Using evidence-based approaches like ABA to address behavioral challenges and promote positive behaviors.</p>
-                            <a href="#" class="btn btn-link">Read More</a>
+                            <p>Using evidence-based approaches like ABA to address behavioral challenges and promote 
+                                positive behaviors.</p>
+                           
                         </article>
                     </div>
                     <div class="col-md-3">
@@ -194,7 +197,6 @@
                             </div>
                             <h3>Family Support</h3>
                             <p>Providing workshops and resources for families to support their children’s growth and well-being.</p>
-                            <a href="#" class="btn btn-link">Read More</a>
                         </article>
                     </div>
                 </div>
@@ -209,7 +211,7 @@
                 <div class="puzzle-container">
                     <article class="puzzle-piece piece-1">
                         <div class="puzzle-content">
-                            <p>Occupational therapy at KES 300 & speech therapy at KES 500 per session—a fraction of traditional prices.</p>
+                            <p><b> therapy at KES 300 & speech therapy at KES 500 per session</b> a fraction of traditional prices.</p>
                         </div>
                     </article>
                     <article class="puzzle-piece piece-2">
@@ -244,7 +246,7 @@
                     <div class="col-md-4">
                         <article class="event-card">
                             <div class="event-image-container">
-                                <img src="Images/playing.png" alt="Autism Awareness Walk" class="event-img img-fluid" loading="lazy">
+                                <img src="Images\Events\Autism Awareness.png" alt="Autism Awareness Walk" class="event-img img-fluid" loading="lazy">
                                 <span class="event-date-badge">15 May</span>
                             </div>
                             <div class="event-details">
@@ -258,7 +260,7 @@
                     <div class="col-md-4">
                         <article class="event-card">
                             <div class="event-image-container">
-                                <img src="Images\plyt.png" alt="Parent Support Workshop" class="event-img img-fluid" loading="lazy">
+                                <img src="Images\Events\Parent support.png" alt="Parent Support Workshop" class="event-img img-fluid" loading="lazy">
                                 <span class="event-date-badge">10 Jun</span>
                             </div>
                             <div class="event-details">
@@ -272,7 +274,7 @@
                     <div class="col-md-4">
                         <article class="event-card">
                             <div class="event-image-container">
-                                <img src="Images/playing.png" alt="Sensory Play Day" class="event-img img-fluid" loading="lazy">
+                                <img src="Images/Events/sensory.jpg" alt="Sensory Play Day" class="event-img img-fluid" loading="lazy">
                                 <span class="event-date-badge">20 Jul</span>
                             </div>
                             <div class="event-details">
@@ -299,46 +301,46 @@
                     <div class="team-row">
                         <article class="team-member">
                             <span class="team-label">Occupational Therapist</span>
-                            <img src="Images/team one.jpg" alt="Jane Doe, Occupational Therapist" class="team-img img-fluid" loading="lazy">
+                            <img src="Images/team-jane.jpg" alt="Jane Doe, Occupational Therapist" class="team-img img-fluid" loading="lazy">
                             <h3>Jane Doe</h3>
                             <p>Helping kids grow through fun and engaging activities.</p>
                             <div class="social-links">
-                                <a href="https://facebook.com" target="_blank" aria-label="Jane Doe's Facebook"><i class="fab fa-facebook-f"></i></a>
-                                <a href="https://twitter.com" target="_blank" aria-label="Jane Doe's Twitter"><i class="fab fa-twitter"></i></a>
-                                <a href="https://instagram.com" target="_blank" aria-label="Jane Doe's Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="https://facebook.com/TumainiAutismCentre" target="_blank" aria-label="Tumaini Autism Centre's Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://twitter.com/TumainiAutism" target="_blank" aria-label="Tumaini Autism Centre's Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="https://instagram.com/TumainiAutismCentre" target="_blank" aria-label="Tumaini Autism Centre's Instagram"><i class="fab fa-instagram"></i></a>
                             </div>
                         </article>
                         <article class="team-member">
                             <span class="team-label">Speech Therapist</span>
-                            <img src="Images/team one.jpg" alt="John Smith, Speech Therapist" class="team-img img-fluid" loading="lazy">
+                            <img src="Images/team-john.jpg" alt="John Smith, Speech Therapist" class="team-img img-fluid" loading="lazy">
                             <h3>John Smith</h3>
                             <p>Supporting communication with care and creativity.</p>
                             <div class="social-links">
-                                <a href="https://facebook.com" target="_blank" aria-label="John Smith's Facebook"><i class="fab fa-facebook-f"></i></a>
-                                <a href="https://twitter.com" target="_blank" aria-label="John Smith's Twitter"><i class="fab fa-twitter"></i></a>
-                                <a href="https://instagram.com" target="_blank" aria-label="John Smith's Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="https://facebook.com/TumainiAutismCentre" target="_blank" aria-label="Tumaini Autism Centre's Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://twitter.com/TumainiAutism" target="_blank" aria-label="Tumaini Autism Centre's Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="https://instagram.com/TumainiAutismCentre" target="_blank" aria-label="Tumaini Autism Centre's Instagram"><i class="fab fa-instagram"></i></a>
                             </div>
                         </article>
                         <article class="team-member">
                             <span class="team-label">Behavioral Therapist</span>
-                            <img src="Images/team one.jpg" alt="Sarah Lee, Behavioral Therapist" class="team-img img-fluid" loading="lazy">
+                            <img src="Images/team-sarah.jpg" alt="Sarah Lee, Behavioral Therapist" class="team-img img-fluid" loading="lazy">
                             <h3>Sarah Lee</h3>
                             <p>Guiding positive behaviors with evidence-based methods.</p>
                             <div class="social-links">
-                                <a href="https://facebook.com" target="_blank" aria-label="Sarah Lee's Facebook"><i class="fab fa-facebook-f"></i></a>
-                                <a href="https://twitter.com" target="_blank" aria-label="Sarah Lee's Twitter"><i class="fab fa-twitter"></i></a>
-                                <a href="https://instagram.com" target="_blank" aria-label="Sarah Lee's Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="https://facebook.com/TumainiAutismCentre" target="_blank" aria-label="Tumaini Autism Centre's Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://twitter.com/TumainiAutism" target="_blank" aria-label="Tumaini Autism Centre's Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="https://instagram.com/TumainiAutismCentre" target="_blank" aria-label="Tumaini Autism Centre's Instagram"><i class="fab fa-instagram"></i></a>
                             </div>
                         </article>
                         <article class="team-member">
                             <span class="team-label">Family Counselor</span>
-                            <img src="Images/team one.jpg" alt="Emily Brown, Family Counselor" class="team-img img-fluid" loading="lazy">
+                            <img src="Images/team-emily.jpg" alt="Emily Brown, Family Counselor" class="team-img img-fluid" loading="lazy">
                             <h3>Emily Brown</h3>
                             <p>Empowering families with resources and support.</p>
                             <div class="social-links">
-                                <a href="https://facebook.com" target="_blank" aria-label="Emily Brown's Facebook"><i class="fab fa-facebook-f"></i></a>
-                                <a href="https://twitter.com" target="_blank" aria-label="Emily Brown's Twitter"><i class="fab fa-twitter"></i></a>
-                                <a href="https://instagram.com" target="_blank" aria-label="Emily Brown's Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="https://facebook.com/TumainiAutismCentre" target="_blank" aria-label="Tumaini Autism Centre's Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://twitter.com/TumainiAutism" target="_blank" aria-label="Tumaini Autism Centre's Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="https://instagram.com/TumainiAutismCentre" target="_blank" aria-label="Tumaini Autism Centre's Instagram"><i class="fab fa-instagram"></i></a>
                             </div>
                         </article>
                     </div>
@@ -346,47 +348,63 @@
             </div>
         </section>
 
-<!-- Gallery Section -->
-<section class="gallery-section" id="gallery" aria-labelledby="gallery-title">
-    <div class="container">
-        <h2 class="text-center" id="gallery-title">Our Gallery</h2>
-        <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <!-- Replace these with your actual image paths -->
-                <div class="carousel-item active">
-                    <img src="Images/playing.png" class="d-block w-100 gallery-img" alt="Children playing at Tumaini Centre">
-                </div>
-                <div class="carousel-item">
-                    <img src="Images/ofice.jpeg" class="d-block w-100 gallery-img" alt="Tumaini Centre office">
-                </div>
-                <div class="carousel-item">
-                    <img src="Images/plyt.png" class="d-block w-100 gallery-img" alt="Sensory play activity">
+        <!-- Gallery Section -->
+        <section class="gallery-section" id="gallery" aria-labelledby="gallery-title">
+            <div class="container">
+                <h2 class="text-center" id="gallery-title">Our Gallery</h2>
+                <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="Images/entrance.jpeg" class="gallery-img-link">
+                                <img src="Images\entrace.jpeg" class="d-block w-100 gallery-img" alt="Entrance to Tumaini Autism Centre" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="Images/office.jpeg" class="gallery-img-link">
+                                <img src="Images\ofice.jpeg" class="d-block w-100 gallery-img" alt="Tumaini Centre office" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="Images/grounds.jpeg" class="gallery-img-link">
+                                <img src="Images/grounds.jpeg" class="d-block w-100 gallery-img" alt="Grounds at Tumaini Centre" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="Images/picture.jpeg" class="gallery-img-link">
+                                <img src="Images/picture.jpeg" class="d-block w-100 gallery-img" alt="Activity at Tumaini Centre" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="Images/fields.jpeg" class="gallery-img-link">
+                                <img src="Images/fields.jpeg" class="d-block w-100 gallery-img" alt="Fields at Tumaini Centre" loading="lazy">
+                            </a>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
-    <!-- Modal for Full-Screen Image -->
-    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img id="modalImage" src="" class="img-fluid" alt="Full-size gallery image">
+            <!-- Modal for Full-Screen Image -->
+            <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="imageModalLabel">Gallery Image</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img id="modalImage" src="" class="img-fluid" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
         <!-- CTA Banner -->
         <section class="cta-section" aria-labelledby="cta-title">
@@ -411,28 +429,28 @@
                 <h2 class="text-center" id="contact-title">Contact Us</h2>
                 <div class="row">
                     <div class="col-md-6">
-                        <form class="contact-form" action="send_email.php" method="post">>
+                        <form class="contact-form" action="https://formspree.io/f/your-form-id" method="post">
                             <div class="mb-3">
                                 <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Your Name" required aria-describedby="nameHelp">
-                                <div id="nameHelp" class="form-text">Please enter your full name.</div>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required aria-describedby="nameHelp">
+                                <div id="nameHelp" class="form-text">Enter your first and last name for a personalized response.</div>
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Your Email" required aria-describedby="emailHelp">
-                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">Your email will only be used to reply to your inquiry.</div>
                             </div>
                             <div class="mb-3">
                                 <label for="message" class="form-label">Message</label>
-                                <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required aria-describedby="messageHelp"></textarea>
-                                <div id="messageHelp" class="form-text">Tell us how we can assist you.</div>
+                                <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your Message" required aria-describedby="messageHelp"></textarea>
+                                <div id="messageHelp" class="form-text">Share your questions or comments about our services.</div>
                             </div>
                             <button type="submit" class="btn btn-primary">Send Message</button>
                         </form>
                     </div>
                     <div class="col-md-6">
-                        <div class="map-container">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.758678734491!2d36.950117314753674!3d-0.420297535396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMMKwMjUnMTMuMSJTIDM2wrA1NycwMC40IkU!5e0!3m2!1sen!2s!4v1634567891234" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" title="Tumaini Autism Centre Location in Nanyuki"></iframe>
+                        <div class="map-container" data-lazy-load>
+                            <iframe data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.758678734491!2d36.950117314753674!3d-0.420297535396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMMKwMjUnMTMuMSJTIDM2wrA1NycwMC40IkU!5e0!3m2!1sen!2s!4v1634567891234" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" title="Tumaini Autism Centre Location in Nanyuki"></iframe>
                         </div>
                         <p class="mt-3 text-center">
                             <strong>Location:</strong> Huruma Road, Near Huruma Hospital, Nanyuki, Nyeri<br>
@@ -463,9 +481,9 @@
                     <div class="col-md-4">
                         <h4>Follow Us</h4>
                         <div class="social-links">
-                            <a href="https://facebook.com" target="_blank" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://twitter.com" target="_blank" aria-label="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
-                            <a href="https://instagram.com" target="_blank" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="   https://facebook.com/TumainiAutismCentre" target="_blank" aria-label="Follow Tumaini Autism Centre on Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/TumainiAutism" target="_blank" aria-label="Follow Tumaini Autism Centre on Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="https://instagram.com/TumainiAutismCentre" target="_blank" aria-label="Follow Tumaini Autism Centre on Instagram"><i class="fab fa-instagram"></i></a>
                         </div>
                         <h4>Location</h4>
                         <p>Huruma Road, Near Huruma Hospital, Nanyuki, Nyeri</p>
@@ -473,15 +491,15 @@
                         <p><a href="mailto:tumainilearning@gmail.com" aria-label="Email us">tumainilearning@gmail.com</a></p>
                     </div>
                 </div>
-                <button class="back-to-top" aria-label="Back to top" title="Back to top">
+                <button class="back-to-top" role="button" aria-label="Back to top" title="Back to top">
                     <i class="fas fa-arrow-up"></i>
                 </button>
             </div>
         </footer>
 
-    <!-- Bootstrap 5 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <!-- Custom JS -->
-    <script src="scripts.js"></script>
+        <!-- Bootstrap 5 JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <!-- Custom JS -->
+        <script src="scripts.js"></script>
 </body>
 </html>

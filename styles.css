@@ -23,7 +23,7 @@ html {
 }
 
 body {
-    font-family: 'Comic Neue', cursive;
+    font-family: 'Merriweather', serif; /* Changed from Comic Neue */
     background-color: var(--cream);
     color: var(--dark-gray);
     overflow-x: hidden;
@@ -132,7 +132,7 @@ body {
     padding: 0.75rem 1.5rem;
     display: flex;
     justify-content: space-evenly;
-    width: 90%;
+    width: 95%;
 }
 
 .nav-item {
@@ -202,7 +202,7 @@ body {
 }
 
 .contact-info a {
-    color: var(--dark-gray);
+    color: var(--dark-gray vivo);
     text-decoration: none;
     display: inline-flex;
     align-items: center;
@@ -230,13 +230,15 @@ body {
 }
 
 .logo h1 {
-    font-family: 'Bubblegum Sans', cursive;
+    font-family: 'Merriweather', serif; /* Changed from Bubblegum Sans */
+    letter-spacing: 0.02em; /* Added for elegance */
     color: var(--soft-coral);
     font-size: 1.5rem;
     margin-bottom: 0.3125rem;
 }
 
 .logo p {
+    font-family: 'Open Sans', sans-serif; /* Changed to Open Sans */
     font-size: 0.75rem;
     color: var(--dark-gray);
 }
@@ -283,13 +285,16 @@ body {
 }
 
 .hero-text h2 {
-    font-family: 'Bubblegum Sans', cursive;
+    font-family: 'Merriweather', serif; /* Changed from Bubblegum Sans */
+    letter-spacing: 0.02em; /* Added for elegance */
     font-size: 1.125rem;
     color: var(--muted-teal);
     margin-bottom: 0.625rem;
 }
 
 .hero-text h1 {
+    font-family: 'Merriweather', serif; /* Changed from Bubblegum Sans */
+    letter-spacing: 0.02em; /* Added for elegance */
     font-size: 2.25rem;
     color: var(--soft-coral);
     margin-bottom: 1.25rem;
@@ -299,7 +304,7 @@ body {
 .hero-text h1 em {
     font-style: normal;
     color: var(--light-blue);
-    font-family: 'Bubblegum Sans', cursive;
+    font-family: 'Merriweather', serif; /* Changed from Bubblegum Sans */
 }
 
 .hero-text .btn-primary {
@@ -326,7 +331,8 @@ body {
 }
 
 .section-title {
-    font-family: 'Bubblegum Sans', cursive;
+    font-family: 'Merriweather', serif; /* Changed from Bubblegum Sans */
+    letter-spacing: 0.02em; /* Added for elegance */
     font-size: 2.25rem;
     color: var(--soft-coral);
     margin-bottom: 0.625rem;
@@ -374,15 +380,16 @@ body {
 }
 
 .row-title {
-    font-family: 'Bubblegum Sans', cursive;
+    font-family: 'Merriweather', serif; /* Changed from Bubblegum Sans */
+    letter-spacing: 0.02em; /* Added for elegance */
     font-size: 1.5rem;
     color: var(--muted-teal);
     margin-bottom: 0.9375rem;
 }
 
 .about-row-content p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 0.875rem;
+    font-family: 'Open Sans', sans-serif; /* Retained Open Sans */
+    font-size: 1rem; /* Increased from 0.875rem for accessibility */
     color: var(--dark-gray);
     line-height: 1.6;
     margin-bottom: 0.625rem;
@@ -418,7 +425,8 @@ body {
 }
 
 .section-subtitle {
-    font-family: 'Bubblegum Sans', cursive;
+    font-family: 'Merriweather', serif;
+    letter-spacing: 0.02em;
     font-size: 1rem;
     color: var(--soft-coral);
     position: relative;
@@ -437,7 +445,7 @@ body {
 }
 
 .what-we-do-card {
-    background-color: #FFFFFF;
+    background-color: #FFFFFF; /* Consistent non-hover background */
     border: 0.3125rem solid transparent;
     border-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M0 0 Q 5 10, 10 0 T 20 0 Q 15 10, 10 20 T 0 20 Q 5 10, 0 0 Z" fill="none" stroke="%23FF9999" stroke-width="2" stroke-dasharray="5,5"/></svg>') 10 stretch;
     border-radius: 50%;
@@ -452,11 +460,14 @@ body {
     box-shadow: 0.3125rem 0.3125rem 0.625rem rgba(0, 0, 0, 0.1), -0.3125rem -0.3125rem 0.625rem rgba(255, 255, 255, 0.5);
     transition: all 0.3s ease;
     cursor: pointer;
+    padding: 1rem; /* Add padding to prevent content from touching edges */
+    box-sizing: border-box; /* Ensure padding doesn't increase size */
+    overflow: hidden; /* Prevent content from overflowing */
 }
 
 .what-we-do-card.highlight-card {
-    background-color: var(--muted-teal);
-    color: #FFFFFF;
+    background-color: #FFFFFF; /* Match non-hover background to regular card */
+    color: var(--dark-gray); /* Match text color to regular card */
 }
 
 .what-we-do-card .icon-box {
@@ -472,7 +483,7 @@ body {
 }
 
 .what-we-do-card.highlight-card .icon-box {
-    background-color: #FFFFFF;
+    background-color: var(--light-cream); /* Match regular card */
 }
 
 .what-we-do-card .icon-box i {
@@ -481,58 +492,78 @@ body {
 }
 
 .what-we-do-card.highlight-card .icon-box i {
-    color: var(--muted-teal);
+    color: var(--soft-coral); /* Match regular card */
 }
 
 .what-we-do-card h3 {
-    font-family: 'Bubblegum Sans', cursive;
-    font-size: 1.25rem;
+    font-family: 'Merriweather', serif;
+    letter-spacing: 0.02em;
+    font-size: 1.1rem; /* Reduced slightly to fit within circle */
     color: var(--dark-gray);
     margin-bottom: 0.625rem;
+    max-width: 90%; /* Limit text width */
+    word-wrap: break-word; /* Ensure long words wrap */
 }
 
 .what-we-do-card.highlight-card h3 {
-    color: #FFFFFF;
+    color: var(--dark-gray); /* Match regular card */
 }
 
 .what-we-do-card p {
-    font-size: 0.875rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.80rem; /* Reduced slightly to fit within circle */
     color: var(--dark-gray);
     margin-bottom: 0.9375rem;
+    max-width: 90%; /* Limit text width */
+    word-wrap: break-word; /* Ensure long words wrap */
 }
 
 .what-we-do-card.highlight-card p {
-    color: #FFFFFF;
+    color: var(--dark-gray); /* Match regular card */
 }
 
 .what-we-do-card .btn-link {
     background-color: var(--soft-coral);
     color: #FFFFFF;
     font-weight: 600;
-    padding: 0.5rem 1.25rem;
+    padding: 0.4rem 1rem; /* Slightly smaller padding to fit */
     border-radius: 1.5625rem;
     text-decoration: none;
     transition: all 0.3s ease;
+    font-size: 0.75rem; /* Smaller font to fit */
 }
 
 .what-we-do-card.highlight-card .btn-link {
-    background-color: #FFFFFF;
-    color: var(--muted-teal);
+    background-color: var(--soft-coral); /* Match regular card */
+    color: #FFFFFF;
 }
 
 .what-we-do-card:hover {
     transform: translateY(-0.3125rem);
     box-shadow: 0.5rem 0.5rem 0.9375rem rgba(0, 0, 0, 0.15), -0.5rem -0.5rem 0.9375rem rgba(255, 255, 255, 0.7);
+    background-color: var(--light-blue); /* Hover background */
+    color: #FFFFFF;
 }
 
 .what-we-do-card:hover .icon-box {
     transform: rotate(360deg);
+    background-color: #FFFFFF;
+}
+
+.what-we-do-card:hover .icon-box i {
+    color: var(--muted-teal);
+}
+
+.what-we-do-card:hover h3,
+.what-we-do-card:hover p {
+    color: #FFFFFF;
 }
 
 .what-we-do-card:hover .btn-link {
     background-color: var(--light-blue);
     color: #FFFFFF;
 }
+
 
 /* Puzzle Section */
 .puzzle-section {
@@ -570,8 +601,8 @@ body {
 
 .puzzle-content {
     padding: 1.25rem;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 0.875rem;
+    font-family: 'Open Sans', sans-serif; /* Changed to Open Sans */
+    font-size: 1rem; /* Increased from 0.875rem for accessibility */
     color: #333;
     text-align: center;
     height: 100%;
@@ -690,7 +721,8 @@ body {
 }
 
 .events-section h2 {
-    font-family: 'Bubblegum Sans', cursive;
+    font-family: 'Merriweather', serif; /* Changed from Bubblegum Sans */
+    letter-spacing: 0.02em; /* Added for elegance */
     font-size: 2.25rem;
     color: var(--dark-gray);
     margin-bottom: 2.5rem;
@@ -758,14 +790,17 @@ body {
 }
 
 .event-card h3 {
-    font-family: 'Bubblegum Sans', cursive;
+    font-family: 'Merriweather', serif; /* Changed from Bubblegum Sans */
+    letter-spacing: 0.02em; /* Added for elegance */
     font-size: 1.25rem;
     color: var(--muted-teal);
     margin-bottom: 0.625rem;
 }
 
 .event-card p {
-    font-size: 0.875rem;
+    font-family: 'Open Sans', sans-serif; /* Changed to Open Sans */
+    font-size: 1rem; /* Increased from 0.875rem for accessibility */
+    color: var(--dark-gray);
 }
 
 /* Team Section */
@@ -797,14 +832,16 @@ body {
 }
 
 .team-section h2 {
-    font-family: 'Bubblegum Sans', cursive;
+    font-family: 'Merriweather', serif; /* Changed from Bubblegum Sans */
+    letter-spacing: 0.02em; /* Added for elegance */
     font-size: 2.25rem;
     color: var(--soft-coral);
     margin-bottom: 0.9375rem;
 }
 
 .team-section p {
-    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif; /* Changed to Open Sans */
+    font-size: 1rem; /* Increased from 0.875rem for accessibility */
     color: var(--dark-gray);
     max-width: 37.5rem;
     margin: 0 auto;
@@ -865,14 +902,16 @@ body {
 }
 
 .team-member h3 {
-    font-family: 'Comic Neue', cursive;
+    font-family: 'Merriweather', serif; /* Changed from Comic Neue */
+    letter-spacing: 0.02em; /* Added for elegance */
     font-size: 1.125rem;
     color: var(--dark-teal);
     margin-bottom: 0.3125rem;
 }
 
 .team-member p {
-    font-size: 0.75rem;
+    font-family: 'Open Sans', sans-serif; /* Changed to Open Sans */
+    font-size: 0.75rem; /* Kept smaller due to space constraints, but can increase if needed */
     margin-bottom: 0.625rem;
 }
 
@@ -887,7 +926,6 @@ body {
     color: var(--dark-teal);
     transform: scale(1.2);
 }
-
 
 /* Gallery Section */
 .gallery-section {
@@ -911,7 +949,8 @@ body {
 }
 
 .gallery-section h2 {
-    font-family: 'Bubblegum Sans', cursive;
+    font-family: 'Merriweather', serif; /* Changed from Bubblegum Sans */
+    letter-spacing: 0.02em; /* Added for elegance */
     font-size: 2.25rem;
     color: var(--soft-coral);
     margin-bottom: 2.5rem;
@@ -963,27 +1002,6 @@ body {
     border-radius: 1.25rem;
 }
 
-/* Responsive Design for Gallery */
-@media (max-width: 768px) {
-    .gallery-section h2 {
-        font-size: 1.75rem;
-    }
-
-    .gallery-img {
-        height: 300px;
-    }
-
-    .carousel {
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 575px) {
-    .gallery-img {
-        height: 200px;
-    }
-}
-
 /* CTA Section */
 .cta-section {
     padding: 2.5rem 0;
@@ -992,13 +1010,15 @@ body {
 }
 
 .cta-section h2 {
-    font-family: 'Bubblegum Sans', cursive;
+    font-family: 'Merriweather', serif; /* Changed from Bubblegum Sans */
+    letter-spacing: 0.02em; /* Added for elegance */
     font-size: 2rem;
     color: #FFFFFF;
     margin-bottom: 0.9375rem;
 }
 
 .cta-section p {
+    font-family: 'Open Sans', sans-serif; /* Changed to Open Sans */
     font-size: 1.125rem;
     color: #FFFFFF;
     margin-bottom: 1.25rem;
@@ -1059,14 +1079,16 @@ body {
 }
 
 .contact-section h2 {
-    font-family: 'Bubblegum Sans', cursive;
+    font-family: 'Merriweather', serif; /* Changed from Bubblegum Sans */
+    letter-spacing: 0.02em; /* Added for elegance */
     font-size: 2rem;
     color: var(--soft-coral);
     margin-bottom: 2.5rem;
 }
 
 .contact-form .form-label {
-    font-family: 'Comic Neue', cursive;
+    font-family: 'Merriweather', serif; /* Changed from Comic Neue */
+    letter-spacing: 0.02em; /* Added for elegance */
 }
 
 .contact-form .form-control {
@@ -1091,7 +1113,8 @@ body {
 }
 
 .contact-info p {
-    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif; /* Changed to Open Sans */
+    font-size: 1rem; /* Increased from 0.875rem for accessibility */
     color: var(--dark-gray);
     margin-bottom: 0.5rem;
 }
@@ -1139,7 +1162,8 @@ body {
 }
 
 .footer-section h4 {
-    font-family: 'Bubblegum Sans', cursive;
+    font-family: 'Merriweather', serif; /* Changed from Bubblegum Sans */
+    letter-spacing: 0.02em; /* Added for elegance */
     font-size: 1.25rem;
     color: var(--soft-coral);
     margin-bottom: 0.9375rem;
@@ -1147,7 +1171,8 @@ body {
 
 .footer-section p,
 .footer-section li {
-    font-size: 0.875rem;
+    font-family: 'Open Sans', sans-serif; /* Changed to Open Sans */
+    font-size: 1rem; /* Increased from 0.875rem for accessibility */
     margin-bottom: 0.625rem;
 }
 
@@ -1337,7 +1362,7 @@ body {
     }
 
     .about-row-content p {
-        font-size: 0.75rem;
+        font-size: 0.875rem; /* Reduced from 1rem for mobile */
     }
 
     .about-icon-wrapper {
@@ -1357,6 +1382,10 @@ body {
         margin-bottom: 1.25rem;
     }
 
+    .what-we-do-card p {
+        font-size: 0.875rem; /* Reduced from 1rem for mobile */
+    }
+
     .events-section h2 {
         font-size: 1.75rem;
     }
@@ -1364,6 +1393,10 @@ body {
     .event-img {
         width: 9.375rem;
         height: 9.375rem;
+    }
+
+    .event-card p {
+        font-size: 0.875rem; /* Reduced from 1rem for mobile */
     }
 
     .event-details {
@@ -1384,12 +1417,37 @@ body {
     }
 
     .puzzle-content {
-        font-size: 0.75rem;
+        font-size: 0.875rem; /* Reduced from 1rem for mobile */
         padding: 0.9375rem;
+    }
+
+    .contact-info p {
+        font-size: 0.875rem; /* Reduced from 1rem for mobile */
+    }
+
+    .footer-section p,
+    .footer-section li {
+        font-size: 0.875rem; /* Reduced from 1rem for mobile */
     }
 }
 
 @media (max-width: 575px) {
+    .hero-text h1 {
+        font-size: 1.5rem; /* Added for smaller screens */
+    }
+
+    .gallery-img {
+        height: 200px;
+    }
+
+    .gallery-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .carousel {
+        max-width: 100%;
+    }
+
     .team-section h2 {
         font-size: 1.5rem;
     }
