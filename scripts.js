@@ -135,3 +135,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Gallery Modal Functionality
+document.addEventListener('DOMContentLoaded', function () {
+    const galleryImages = document.querySelectorAll('.gallery-img');
+    const modalImage = document.getElementById('modalImage');
+    const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+
+    galleryImages.forEach(image => {
+        image.addEventListener('click', function () {
+            modalImage.src = this.src;
+            modalImage.alt = this.alt;
+            imageModal.show();
+        });
+    });
+});

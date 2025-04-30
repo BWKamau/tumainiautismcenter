@@ -888,6 +888,102 @@ body {
     transform: scale(1.2);
 }
 
+
+/* Gallery Section */
+.gallery-section {
+    padding: 3.75rem 0;
+    background: linear-gradient(to bottom, var(--cream), var(--light-cream));
+    position: relative;
+}
+
+.gallery-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><circle cx="25" cy="25" r="10" fill="%23A3D8F4" fill-opacity="0.1"/></svg>') repeat;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.gallery-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.gallery-section h2 {
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 2.25rem;
+    color: var(--soft-coral);
+    margin-bottom: 2.5rem;
+}
+
+.carousel {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    box-shadow: 0.3125rem 0.3125rem 0.625rem rgba(0, 0, 0, 0.1), -0.3125rem -0.3125rem 0.625rem rgba(255, 255, 255, 0.5);
+}
+
+.gallery-img {
+    height: 400px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 5%;
+    border-radius: 0.625rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: brightness(0) invert(1);
+}
+
+.modal-content {
+    background-color: var(--cream);
+    border-radius: 1.25rem;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+#modalImage {
+    width: 100%;
+    height: auto;
+    border-radius: 1.25rem;
+}
+
+/* Responsive Design for Gallery */
+@media (max-width: 768px) {
+    .gallery-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .gallery-img {
+        height: 300px;
+    }
+
+    .carousel {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 575px) {
+    .gallery-img {
+        height: 200px;
+    }
+}
+
 /* CTA Section */
 .cta-section {
     padding: 2.5rem 0;
