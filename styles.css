@@ -9,13 +9,10 @@
     --cream: #FFF5EE;
     --light-cream: #F8E8DE;
     --dark-gray: #1A1A1A;
-
-/* New blue and red palette */
---primary-blue: #003366;
---accent-red: #B22222;
---light-gray: #f0f0f0;
---white: #ffffff;
-
+    --primary-blue: #003366;
+    --accent-red: #B22222;
+    --light-gray: #f0f0f0;
+    --white: #ffffff;
 }
 
 /* Reset and Base Styles */
@@ -36,6 +33,12 @@ body {
     font-size: 16px;
     line-height: 1.8;
     overflow-x: hidden;
+    padding-top: 0;
+    transition: padding-top 0.3s ease;
+}
+
+body.navbar-fixed {
+    padding-top: 70px; /* Adjust based on navbar height */
 }
 
 /* Keyframes for Animations */
@@ -81,10 +84,19 @@ body {
 .header-area {
     background: linear-gradient(to bottom, rgb(239, 213, 163), rgb(242, 219, 67));
     padding: 24px 0;
-    position: sticky;
-    top: 0;
+    transition: all 0.3s ease;
+    position: relative;
     z-index: 1000;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-area.collapsed {
+    padding: 0;
+}
+
+.header-area.collapsed .header-content,
+.header-area.collapsed .logo {
+    display: none;
 }
 
 /* Header Content Layout */
@@ -124,18 +136,44 @@ body {
 
 /* Navbar Styles */
 .navbar {
-    flex-grow: 1;
-    max-width: 900px;
+    flex-grow: 0; /* Prevent stretching */
+    max-width: 900px; /* Consistent width */
+    margin: 0 auto; /* Center horizontally */
+    transition: all 0.3s ease;
+    background: transparent; /* Transparent in non-sticky state */
+}
+
+.navbar.is-sticky {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: 900px !important; /* Restrict width when sticky */
+    margin: 0 auto !important; /* Center when sticky */
+    background: transparent !important; /* Keep navbar transparent */
+    box-shadow: none !important; /* No shadow on navbar */
+    z-index: 2000 !important;
+    padding: 12px 0;
 }
 
 .navbar-nav {
-    background-color: var(--light-cream);
-    border-radius: 30px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px rgba(255, 255, 255, 0.5);
+    background: transparent; /* Transparent in non-sticky state */
+    border-radius: 0;
+    box-shadow: none;
     padding: 12px 24px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center; /* Center links */
     width: 100%;
+}
+
+.navbar.is-sticky .navbar-nav {
+    background: rgb(242, 219, 67); /* Light cream, semi-transparent oval background */
+    border-radius: 50px; /* Large border-radius for oval/pill shape */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 8px 24px; /* Adjusted padding for oval shape */
+    width: auto;
+    display: inline-flex;
 }
 
 .nav-item {
@@ -143,19 +181,24 @@ body {
 }
 
 .nav-link {
-    color: var(--dark-gray);
+    color: var(--dark-gray); /* #4A4A4A */
     font-weight: 600;
     padding: 8px 16px;
     border-radius: 20px;
     text-decoration: none;
     transition: all 0.3s ease;
     font-size: 18px;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Improve readability over header gradient */
+}
+
+.navbar.is-sticky .nav-link {
+    text-shadow: none; /* Remove text-shadow when sticky for clarity */
 }
 
 .nav-link:hover,
 .nav-link.active,
 .nav-link:focus {
-    color: var(--light-blue);
+    color: var(--light-blue); /* #4A9999 */
     box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.1), inset -3px -3px 6px rgba(255, 255, 255, 0.5);
     transform: translateY(1px);
     outline: 2px solid var(--light-blue);
@@ -183,9 +226,25 @@ body {
     transition: transform 0.3s ease;
 }
 
+/* Mobile: Adjust oval background for collapsed menu */
+@media (max-width: 991.98px) {
+    .navbar.is-sticky .navbar-nav {
+        background: rgba(248, 232, 222, 0.9); /* Same oval background */
+        border-radius: 30px; /* Slightly smaller radius for mobile */
+        padding: 12px 16px; /* Adjusted padding */
+        margin: 10px 0; /* Space around collapsed menu */
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Center links vertically */
+    }
+}
+
+
 /* Donation Link */
 .donation-link {
-    position: absolute;
+    position: fixed;
     top: 10px;
     right: 20px;
     background-color: #0b8e35;
@@ -196,7 +255,7 @@ body {
     text-decoration: none;
     transition: all 0.3s ease;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1100;
+    z-index: 2100; /* Higher than navbar */
     animation: pulse 2s ease-in-out infinite;
 }
 
@@ -255,7 +314,7 @@ body {
 .logo h1 {
     font-family: 'Merriweather', serif;
     letter-spacing: 0.02em;
-    color: #D24343; /* Darker coral */
+    color: #D24343;
     font-size: clamp(18px, 5vw, 30px);
     margin-bottom: 5px;
 }
@@ -474,7 +533,7 @@ body {
     border: 2px solid var(--soft-coral);
     border-radius: 50%;
     width: 100%;
-    max-width: 270px;
+    max-width: 300px;
     margin: 0 auto 20px;
     padding: 20px;
     display: flex;
@@ -1282,6 +1341,14 @@ body {
         margin: 10px 0;
     }
 
+    .navbar.is-sticky {
+        padding: 10px 0;
+    }
+
+    body.navbar-fixed {
+        padding-top: 60px; /* Adjust for mobile */
+    }
+
     .navbar-nav {
         flex-direction: column;
         align-items: center;
@@ -1326,96 +1393,15 @@ body {
     .piece-5 {
         border-radius: 20px;
     }
-}
 
-@media (max-width: 768px) {
-    .hero-text h1 {
-        font-size: 28px;
+    .header-area.collapsed {
+        padding: 0;
     }
 
-    .section-title {
-        font-size: 28px;
-    }
-
-    .about-row-content h3 {
-        font-size: 20px;
-    }
-
-    .what-we-do-card {
-        max-width: 100%;
-    }
-
-    .event-img {
-        width: min(50vw, 150px);
-        height: min(50vw, 150px);
-    }
-
-    .team-member {
-        width: 150px;
-    }
-
-    .team-img {
-        height: 150px;
-    }
-
-    .gallery-img {
-        height: 300px;
-    }
-}
-
-@media (max-width: 575px) {
-    .hero-text h1 {
-        font-size: 24px;
-    }
-
-    .section-title {
-        font-size: 24px;
-    }
-
-    .about-icon-wrapper {
-        width: 60px;
-        height: 60px;
-    }
-
-    .about-icon {
-        font-size: 24px;
-    }
-
-    .contact-form,
-    .map-container {
-        margin-bottom: 20px;
-    }
-
-    .map-container iframe {
-        height: 300px;
-    }
-}
-
-@media (max-width: 768px) {
-    .header-content, .team-row, .puzzle-container, .what-we-do-section .row {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar-nav {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .what-we-do-card {
-        max-width: 90%;
-    }
-
-    .event-img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .team-member {
-        width: 100%;
-    }
-
-    .gallery-img {
-        height: 200px;
+    .donation-link {
+        top: 5px;
+        right: 15px;
+        padding: 6px 15px;
+        font-size: 14px;
     }
 }
